@@ -24,7 +24,7 @@ The analytics workflow spans data cleaning & validation, statistical exploratory
 - **Financial Loss Forensic**: Diagnosed a **$519.7k Gross Revenue Leak** (41.09% revenue share lost to Cancellations and Returns).
 - **Outlier Forensics**: Compared IQR vs. Z-Score methods on right-skewed sales data, successfully identifying 8 high-value VIP transactions (`> $3,200`) where traditional Z-score thresholds failed.
 - **SQL Analytics Engine**: Built an in-memory SQLite analytical engine in Python to run aggregations, windowing, and segment-level queries.
-- **Power BI Executive Dashboard**: Engineered an interactive Power BI report (`powerdashboard4.pbix`) with interactive slicers, KPI breakdown cards, and decomposition trees.
+- **Power BI Executive Dashboard**: Engineered an interactive Power BI report (`visualrepresentationdashboard.pbix`) with interactive slicers, KPI breakdown cards, and decomposition trees.
 
 ---
 
@@ -67,7 +67,7 @@ Internship/
 │   └── Data Analytics Project 3.pdf # Project 3 documentation
 │
 └── project_4/                 # 📊 Power BI Executive Dashboard
-    ├── powerdashboard4.pbix   # Power BI Desktop interactive dashboard
+    ├── visualrepresentationdashboard.pbix   # Power BI Desktop interactive dashboard
     └── Cleaned_Dataset.csv    # Cleaned dataset copy
 ```
 
@@ -135,7 +135,7 @@ Gross Revenue Breakdown ($1.26M Total):
 
 ### 🔹 Project 4: Power BI Executive Dashboard
 * **Folder**: [`project_4/`](file:///r:/Projects/Internship/project_4/)
-* **File**: [`project_4/powerdashboard4.pbix`](file:///r:/Projects/Internship/project_4/powerdashboard4.pbix)
+* **File**: [`project_4/visualrepresentationdashboard.pbix`](file:///r:/Projects/Internship/project_4/visualrepresentationdashboard.pbix)
 * **Objective**: Deliver an executive BI report with interactive filtering, KPI cards, and trend analysis.
 
 #### Dashboard Capabilities:
