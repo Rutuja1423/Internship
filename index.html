@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutuja Shinde | Data Analytics & Business Intelligence Portfolio</title>
+    <meta name="description" content="Industrial Data Analytics & BI Portfolio featuring E-Commerce Data Cleaning, Statistical Forensic EDA ($519.7k Revenue Leak Diagnosis), SQLite Analytical Engine, and Power BI Executive Dashboard.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+
+    <!-- Header Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand">
+                <span class="brand-badge"><i class="fa-solid fa-chart-pie"></i> RS</span>
+                <span class="brand-text">Rutuja Shinde <span class="brand-sub">| Data Analyst</span></span>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> Overview</a>
+                <a href="#project-1" class="nav-link"><i class="fa-solid fa-broom"></i> Data Cleaning</a>
+                <a href="#project-2" class="nav-link"><i class="fa-solid fa-chart-column"></i> Forensic EDA</a>
+                <a href="#project-3" class="nav-link"><i class="fa-solid fa-database"></i> SQL Engine</a>
+                <a href="#project-4" class="nav-link"><i class="fa-solid fa-table-cells-large"></i> Power BI</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://github.com/Rutuja1423/Internship.git" target="_blank" class="btn btn-github">
+                    <i class="fa-brands fa-github"></i> GitHub Repo
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-bg-glow"></div>
+            <div class="section-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span> DecodeLabs Industrial Training Portfolio (Batch 2026)
+                    </div>
+                    <h1 class="hero-title">
+                        End-to-End <span class="gradient-text">Data Analytics</span> & <span class="gradient-text-alt">Business Intelligence</span>
+                    </h1>
+                    <p class="hero-description">
+                        Diagnosing financial revenue leaks, conducting forensic EDA, executing advanced SQL queries, and engineering interactive Power BI dashboards across 1,200 e-commerce transactions ($1.26M+ gross volume).
+                    </p>
+
+                    <!-- Live KPI Metrics Counter Grid -->
+                    <div class="kpi-grid">
+                        <div class="kpi-card" id="kpi-gross-revenue">
+                            <div class="kpi-icon icon-cyan"><i class="fa-solid fa-dollar-sign"></i></div>
+                            <div class="kpi-data">
+                                <span class="kpi-value" data-target="1260785" id="val-revenue">$0</span>
+                                <span class="kpi-label">Gross Revenue Analyzed</span>
+                            </div>
+                        </div>
+                        <div class="kpi-card" id="kpi-orders-count">
+                            <div class="kpi-icon icon-purple"><i class="fa-solid fa-cart-shopping"></i></div>
+                            <div class="kpi-data">
+                                <span class="kpi-value" data-target="1200" id="val-orders">0</span>
+                                <span class="kpi-label">Total Transactions</span>
+                            </div>
+                        </div>
+                        <div class="kpi-card highlight-danger" id="kpi-revenue-leak">
+                            <div class="kpi-icon icon-rose"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                            <div class="kpi-data">
+                                <span class="kpi-value" data-target="519700" id="val-leak">$0</span>
+                                <span class="kpi-label">Financial Revenue Leak Diagnosed</span>
+                            </div>
+                        </div>
+                        <div class="kpi-card" id="kpi-charts-count">
+                            <div class="kpi-icon icon-emerald"><i class="fa-solid fa-chart-line"></i></div>
+                            <div class="kpi-data">
+                                <span class="kpi-value" data-target="8" id="val-charts">0</span>
+                                <span class="kpi-label">Publication-Ready EDA Charts</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-cta-group">
+                        <a href="#project-2" class="btn btn-primary btn-glow">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i> Explore Revenue Leak Forensic
+                        </a>
+                        <a href="#project-3" class="btn btn-secondary">
+                            <i class="fa-solid fa-terminal"></i> Try Live SQL Playground
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project 1: Data Cleaning & Preparation -->
+        <section class="project-section" id="project-1">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag tag-blue"><i class="fa-solid fa-broom"></i> Project 01</span>
+                    <h2 class="section-title">E-Commerce Data Cleaning & Quality Pipeline</h2>
+                    <p class="section-subtitle">Automated Python pipeline for data auditing, missing value imputation, duplicate removal, and row-level pricing validation.</p>
+                </div>
+
+                <div class="grid-2col">
+                    <!-- Interactive Before/After Data Audit Widget -->
+                    <div class="glass-card audit-widget">
+                        <div class="card-header-bar">
+                            <h3><i class="fa-solid fa-file-csv"></i> Dataset Audit & Transformation</h3>
+                            <div class="toggle-buttons">
+                                <button class="toggle-btn active" id="btn-raw-data" onclick="setAuditState('raw')">Raw Dataset</button>
+                                <button class="toggle-btn" id="btn-clean-data" onclick="setAuditState('clean')">Cleaned Dataset</button>
+                            </div>
+                        </div>
+
+                        <div class="audit-metrics-grid">
+                            <div class="audit-metric">
+                                <span class="metric-lbl">Total Rows</span>
+                                <span class="metric-val" id="audit-rows">1,200</span>
+                            </div>
+                            <div class="audit-metric">
+                                <span class="metric-lbl">Missing Values</span>
+                                <span class="metric-val warning-text" id="audit-missing">42 (CouponCode)</span>
+                            </div>
+                            <div class="audit-metric">
+                                <span class="metric-lbl">Price Discrepancies</span>
+                                <span class="metric-val danger-text" id="audit-price-err">8 Mismatches</span>
+                            </div>
+                            <div class="audit-metric">
+                                <span class="metric-lbl">Schema Status</span>
+                                <span class="metric-val success-text" id="audit-status">Raw Unchecked</span>
+                            </div>
+                        </div>
+
+                        <div class="code-preview-box">
+                            <div class="code-header">
+                                <span><i class="fa-brands fa-python"></i> data_analysis.py</span>
+                                <button class="copy-btn" onclick="copyCodeSnippet()"><i class="fa-regular fa-copy"></i> Copy</button>
+                            </div>
+                            <pre><code id="code-snippet"># Step 3c: Verify & Correct TotalPrice = Quantity * UnitPrice
+df['Calculated_Total'] = df['Quantity'] * df['UnitPrice']
+df['Price_Diff'] = abs(df['TotalPrice'] - df['Calculated_Total'])
+
+# Impute missing CouponCode with 'NoCoupon'
+df['CouponCode'] = df['CouponCode'].fillna('NoCoupon')
+
+# Recalculate TotalPrice where discrepancies exist
+df.loc[df['Price_Diff'] > 0.01, 'TotalPrice'] = df['Calculated_Total']</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Pipeline Quality Checklist -->
+                    <div class="glass-card checklist-card">
+                        <h3><i class="fa-solid fa-list-check"></i> Quality Control Checklist</h3>
+                        <ul class="checklist-items">
+                            <li class="check-item checked">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <strong>Missing Value Treatment</strong>
+                                    <p>Filled missing `CouponCode` entries with `'NoCoupon'` rather than dropping, preserving discount usage intent.</p>
+                                </div>
+                            </li>
+                            <li class="check-item checked">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <strong>Duplicate OrderID Removal</strong>
+                                    <p>Audited primary keys against `ORDxxxxxx` regex pattern to eliminate accidental duplicate order records.</p>
+                                </div>
+                            </li>
+                            <li class="check-item checked">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <strong>Date Format & Tracking Validation</strong>
+                                    <p>Converted all dates to ISO `YYYY-MM-DD` standard and verified `TRKxxxxxxxx` tracking number formatting.</p>
+                                </div>
+                            </li>
+                            <li class="check-item checked">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <strong>Pricing Consistency Audit</strong>
+                                    <p>Reconciled row-level math (`TotalPrice = Quantity * UnitPrice`) to eliminate upstream billing glitches.</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="card-footer-action">
+                            <a href="Project_1/data_analysis.py" target="_blank" class="btn btn-outline">
+                                <i class="fa-brands fa-python"></i> View Python Script
+                            </a>
+                            <a href="Project_1/Cleaned_Dataset.csv" download class="btn btn-outline">
+                                <i class="fa-solid fa-download"></i> Download Cleaned CSV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project 2: Forensic EDA & Revenue Leak Analysis -->
+        <section class="project-section alt-bg" id="project-2">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag tag-rose"><i class="fa-solid fa-chart-column"></i> Project 02</span>
+                    <h2 class="section-title">Forensic EDA & Financial Revenue Leak Analysis</h2>
+                    <p class="section-subtitle">Deep-dive statistical distribution analysis, outlier detection (IQR vs. Z-Score), and diagnosis of a $519.7k revenue leak.</p>
+                </div>
+
+                <!-- Financial Revenue Leak Banner -->
+                <div class="glass-card leak-banner">
+                    <div class="leak-header">
+                        <div class="leak-title-box">
+                            <i class="fa-solid fa-triangle-exclamation leak-icon"></i>
+                            <div>
+                                <h3>Financial Revenue Leakage Breakdown</h3>
+                                <p>Analysis of 1,200 orders reveals that 41.09% of gross revenue potential is lost to cancellations and product returns.</p>
+                            </div>
+                        </div>
+                        <div class="leak-badge-large">$519,700 Leak</div>
+                    </div>
+
+                    <div class="leak-bars-grid">
+                        <div class="leak-bar-item">
+                            <div class="bar-info">
+                                <span><i class="fa-solid fa-circle-check text-emerald"></i> Delivered Revenue</span>
+                                <span class="bar-val">$375,400 (29.78%)</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill bg-emerald" style="width: 29.78%"></div></div>
+                        </div>
+                        <div class="leak-bar-item">
+                            <div class="bar-info">
+                                <span><i class="fa-solid fa-truck-fast text-cyan"></i> Shipped Revenue</span>
+                                <span class="bar-val">$365,685 (29.13%)</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill bg-cyan" style="width: 29.13%"></div></div>
+                        </div>
+                        <div class="leak-bar-item">
+                            <div class="bar-info">
+                                <span><i class="fa-solid fa-ban text-rose"></i> Cancelled Orders (Leak 1)</span>
+                                <span class="bar-val">$261,300 (20.72%)</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill bg-rose" style="width: 20.72%"></div></div>
+                        </div>
+                        <div class="leak-bar-item">
+                            <div class="bar-info">
+                                <span><i class="fa-solid fa-rotate-left text-amber"></i> Returned Items (Leak 2)</span>
+                                <span class="bar-val">$258,400 (20.37%)</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill bg-amber" style="width: 20.37%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Chart Gallery (8 High-Res Figures) -->
+                <div class="gallery-header">
+                    <h3><i class="fa-solid fa-images"></i> Publication-Ready Visual Asset Gallery (Click to Enlarge)</h3>
+                    <span class="gallery-count">8 Dark-Theme Visual Assets</span>
+                </div>
+
+                <div class="chart-gallery-grid">
+                    <div class="chart-card" onclick="openChartModal('Project_2/charts/01_univariate_distributions.png', 'Chart 01: Univariate Distributions & Density (Histograms and KDE)', 'Profiles frequency distributions and skewness for Quantity, UnitPrice, ItemsInCart, and TotalPrice.')">
+                        <div class="chart-img-wrapper">
+                            <img src="Project_2/charts/01_univariate_distributions.png" alt="Univariate Distributions" loading="lazy">
+                            <div class="chart-overlay"><i class="fa-solid fa-expand"></i> View Full Chart</div>
+                        </div>
+                        <div class="chart-caption">
+                            <h4>01. Univariate Distributions</h4>
+                            <p>Histograms & KDE Density Curves</p>
+                        </div>
+                    </div>
+
+                    <div class="chart-card" onclick="openChartModal('Project_2/charts/02_five_number_summary_boxplots.png', 'Chart 02: Five-Number Summary & Distribution Spread', 'Boxplot visualizations comparing UnitPrice spread against TotalPrice outliers.')">
+                        <div class="chart-img-wrapper">
+                            <img src="Project_2/charts/02_five_number_summary_boxplots.png" alt="Five-Number Summary" loading="lazy">
+                            <div class="chart-overlay"><i class="fa-solid fa-expand"></i> View Full Chart</div>
+                        </div>
+                        <div class="chart-caption">
+                            <h4>02. Five-Number Summary</h4>
+                            <p>IQR Boxplot Distribution Spread</p>
+                        </div>
+                    </div>
+
+                    <div class="chart-card" onclick="openChartModal('Project_2/charts/03_outlier_iqr_vs_zscore.png', 'Chart 03: Outlier Detection Forensic (IQR vs Z-Score)', 'Demonstrates how the IQR method flags 8 right-skewed VIP transactions (> $3,250) where Z-score fails due to high standard deviation.')">
+                        <div class="chart-img-wrapper">
+                            <img src="Project_2/charts/03_outlier_iqr_vs_zscore.png" alt="Outlier IQR vs Z-Score" loading="lazy">
+                            <div class="chart-overlay"><i class="fa-solid fa-expand"></i> View Full Chart</div>
+                        </div>
+                        <div class="chart-caption">
+                            <h4>03. Outlier Forensics</h4>
+                            <p>IQR Method vs. Z-Score Threshold</p>
+                        </div>
+                    </div>
+
+                    <div class="chart-card" onclick="openChartModal('Project_2/charts/04_correlation_heatmap.png', 'Chart 04: Pearson Correlation Matrix', 'Heatmap displaying correlation coefficients between numerical attributes. UnitPrice (r=0.717) is the strongest driver of TotalPrice.')">
+                        <div class="chart-img-wrapper">
+                            <img src="Project_2/charts/04_correlation_heatmap.png" alt="Pearson Correlation Matrix" loading="lazy">
+                            <div class="chart-overlay"><i class="fa-solid fa-expand"></i> View Full Chart</div>
+                        </div>
+                        <div class="chart-caption">
+                            <h4>04. Correlation Heatmap</h4>
+                            <p>Pearson Correlation (r) Coefficients</p>
+                        </div>
+                    </div>
+
+                    <div class="chart-card" onclick="openChartModal('Project_2/charts/05_order_status_financial_impact.png', 'Chart 05: Revenue Leak & Order Status Impact', 'Bar and Donut charts depicting revenue loss across Cancelled ($261.3k) and Returned ($258.4k) orders.')">
+                        <div class="chart-img-wrapper">
+                            <img src="Project_2/charts/05_order_status_financial_impact.png" alt="Financial Revenue Leak" loading="lazy">
+                            <div class="chart-overlay"><i class="fa-solid fa-expand"></i> View Full Chart</div>
+                        </div>
+                        <div class="chart-caption">
+                            <h4>05. Financial Impact</h4>
+                            <p>$519.7k Revenue Leak Breakdown</p>
+                        </div>
+                    </div>
+
+                    <div class="chart-card" onclick="openChartModal('Project_2/charts/06_product_performance_returns.png', 'Chart 06: Product Category Performance', 'Dual-axis comparison of total revenue vs order volume across product lines.')">
+                        <div class="chart-img-wrapper">
+                            <img src="Project_2/charts/06_product_performance_returns.png" alt="Product Performance" loading="lazy">
+                            <div class="chart-overlay"><i class="fa-solid fa-expand"></i> View Full Chart</div>
+                        </div>
+                        <div class="chart-caption">
+                            <h4>06. Product Performance</h4>
+                            <p>Revenue & Order Volume by Product</p>
+                        </div>
+                    </div>
+
+                    <div class="chart-card" onclick="openChartModal('Project_2/charts/07_referral_coupon_matrix.png', 'Chart 07: Marketing Channel & Coupon Matrix', 'Bar charts displaying revenue attribution across referral channels (Google, Instagram, Referral) and coupon discount codes.')">
+                        <div class="chart-img-wrapper">
+                            <img src="Project_2/charts/07_referral_coupon_matrix.png" alt="Marketing & Coupon Impact" loading="lazy">
+                            <div class="chart-overlay"><i class="fa-solid fa-expand"></i> View Full Chart</div>
+                        </div>
+                        <div class="chart-caption">
+                            <h4>07. Marketing & Coupon Matrix</h4>
+                            <p>Referral Source & Coupon Attribution</p>
+                        </div>
+                    </div>
+
+                    <div class="chart-card" onclick="openChartModal('Project_2/charts/08_monthly_sales_trend.png', 'Chart 08: Monthly Temporal Sales Trends', 'Multi-year temporal line chart tracking revenue and order volume trajectory from Jan 2023 to Jun 2025.')">
+                        <div class="chart-img-wrapper">
+                            <img src="Project_2/charts/08_monthly_sales_trend.png" alt="Monthly Sales Trends" loading="lazy">
+                            <div class="chart-overlay"><i class="fa-solid fa-expand"></i> View Full Chart</div>
+                        </div>
+                        <div class="chart-caption">
+                            <h4>08. Temporal Trends</h4>
+                            <p>Monthly Trajectory (Jan 2023 - Jun 2025)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project 3: SQL Analytical Engine Playground -->
+        <section class="project-section" id="project-3">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag tag-purple"><i class="fa-solid fa-database"></i> Project 03</span>
+                    <h2 class="section-title">SQL Analytical Query Engine</h2>
+                    <p class="section-subtitle">Interactive SQLite3 analytical simulator allowing live execution of complex SQL queries against the e-commerce dataset.</p>
+                </div>
+
+                <div class="glass-card sql-card">
+                    <div class="sql-toolbar">
+                        <div class="sql-title"><i class="fa-solid fa-terminal"></i> Interactive SQL Playground</div>
+                        <div class="sql-preset-buttons">
+                            <button class="sql-preset-btn active" onclick="runPresetQuery('high_value')"><i class="fa-solid fa-bolt"></i> High-Value Orders (> $2000)</button>
+                            <button class="sql-preset-btn" onclick="runPresetQuery('status_summary')"><i class="fa-solid fa-pie-chart"></i> Revenue Share by Status</button>
+                            <button class="sql-preset-btn" onclick="runPresetQuery('product_rev')"><i class="fa-solid fa-boxes-stacked"></i> Top Products by Revenue</button>
+                            <button class="sql-preset-btn" onclick="runPresetQuery('payment_method')"><i class="fa-solid fa-credit-card"></i> Payment Channel Metrics</button>
+                        </div>
+                    </div>
+
+                    <div class="sql-editor-container">
+                        <textarea id="sql-query-input" class="sql-textarea" rows="4" readonly>SELECT OrderID, Product, Quantity, UnitPrice, TotalPrice, OrderStatus 
+FROM orders 
+WHERE TotalPrice > 2000 
+ORDER BY TotalPrice DESC 
+LIMIT 10;</textarea>
+                        <button class="btn btn-primary run-sql-btn" onclick="executeCurrentQuery()">
+                            <i class="fa-solid fa-play"></i> Execute Query
+                        </button>
+                    </div>
+
+                    <div class="sql-results-box">
+                        <div class="sql-results-header">
+                            <span><i class="fa-solid fa-table"></i> Query Results Output</span>
+                            <span class="result-count" id="sql-row-count">Showing 10 records</span>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="data-table" id="sql-output-table">
+                                <thead>
+                                    <!-- Dynamic Table Headers -->
+                                </thead>
+                                <tbody>
+                                    <!-- Dynamic Table Rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project 4: Power BI Executive Dashboard Showcase -->
+        <section class="project-section alt-bg" id="project-4">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag tag-emerald"><i class="fa-solid fa-table-cells-large"></i> Project 04</span>
+                    <h2 class="section-title">Power BI Executive Dashboard</h2>
+                    <p class="section-subtitle">Interactive Power BI executive dashboard (`powerdashboard4.pbix`) with dynamic slicers, KPI breakdown cards, and visual analytics.</p>
+                </div>
+
+                <div class="glass-card pbi-card">
+                    <!-- Dashboard Control Bar / Slicers -->
+                    <div class="pbi-slicer-bar">
+                        <div class="slicer-group">
+                            <label><i class="fa-solid fa-filter"></i> Product Slicer:</label>
+                            <select id="pbi-product-select" onchange="updatePowerBIDashboard()" class="pbi-select">
+                                <option value="All">All Products (Monitor, Laptop, Phone...)</option>
+                                <option value="Monitor">Monitor</option>
+                                <option value="Laptop">Laptop</option>
+                                <option value="Phone">Phone</option>
+                                <option value="Tablet">Tablet</option>
+                                <option value="Printer">Printer</option>
+                                <option value="Desk">Desk</option>
+                                <option value="Chair">Chair</option>
+                            </select>
+                        </div>
+                        <div class="slicer-group">
+                            <label><i class="fa-solid fa-truck"></i> Status Filter:</label>
+                            <select id="pbi-status-select" onchange="updatePowerBIDashboard()" class="pbi-select">
+                                <option value="All">All Statuses</option>
+                                <option value="Delivered">Delivered</option>
+                                <option value="Shipped">Shipped</option>
+                                <option value="Cancelled">Cancelled</option>
+                                <option value="Returned">Returned</option>
+                            </select>
+                        </div>
+                        <div class="pbi-file-badge">
+                            <i class="fa-solid fa-chart-pie"></i> File: <code>powerdashboard4.pbix</code> (192 KB)
+                        </div>
+                    </div>
+
+                    <!-- Simulated Executive BI Dashboard Canvas -->
+                    <div class="pbi-canvas">
+                        <div class="pbi-kpi-row">
+                            <div class="pbi-kpi-card">
+                                <span class="pbi-kpi-title">TOTAL REVENUE</span>
+                                <span class="pbi-kpi-val text-emerald" id="pbi-kpi-rev">$1,260,785</span>
+                                <span class="pbi-kpi-sub">Across selected segment</span>
+                            </div>
+                            <div class="pbi-kpi-card">
+                                <span class="pbi-kpi-title">TOTAL ORDERS</span>
+                                <span class="pbi-kpi-val text-cyan" id="pbi-kpi-orders">1,200</span>
+                                <span class="pbi-kpi-sub">Completed transactions</span>
+                            </div>
+                            <div class="pbi-kpi-card">
+                                <span class="pbi-kpi-title">AVERAGE ORDER VALUE</span>
+                                <span class="pbi-kpi-val text-purple" id="pbi-kpi-aov">$1,050.65</span>
+                                <span class="pbi-kpi-sub">Per transaction</span>
+                            </div>
+                            <div class="pbi-kpi-card">
+                                <span class="pbi-kpi-title">RETURN / CANCEL RATE</span>
+                                <span class="pbi-kpi-val text-rose" id="pbi-kpi-leak">41.09%</span>
+                                <span class="pbi-kpi-sub">Combined revenue leak</span>
+                            </div>
+                        </div>
+
+                        <!-- Visual Breakdown Cards -->
+                        <div class="pbi-visuals-grid">
+                            <div class="pbi-visual-card">
+                                <div class="visual-header">
+                                    <h4>Revenue Distribution by Category</h4>
+                                    <span class="visual-badge">Bar Chart</span>
+                                </div>
+                                <div class="pbi-chart-placeholder" id="pbi-bar-chart">
+                                    <!-- Dynamic CSS Bars -->
+                                </div>
+                            </div>
+
+                            <div class="pbi-visual-card">
+                                <div class="visual-header">
+                                    <h4>Order Status Revenue Share</h4>
+                                    <span class="visual-badge">Donut Breakdown</span>
+                                </div>
+                                <div class="pbi-donut-container" id="pbi-donut-chart">
+                                    <!-- Dynamic Donut -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pbi-download-footer">
+                        <span><i class="fa-solid fa-circle-info"></i> Open <code>powerdashboard4.pbix</code> in Power BI Desktop to interact with full decomposition trees and mobile layouts.</span>
+                        <a href="project_4/powerdashboard4.pbix" download class="btn btn-emerald">
+                            <i class="fa-solid fa-download"></i> Download Power BI Desktop File (.pbix)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chart Lightbox Modal -->
+    <div class="modal-overlay" id="chartModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeChartModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body">
+                <img src="" id="modal-img" alt="Enlarged Chart View">
+                <div class="modal-info">
+                    <h3 id="modal-title">Chart Title</h3>
+                    <p id="modal-desc">Chart Description</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-container footer-content">
+            <div class="footer-brand">
+                <span class="brand-badge"><i class="fa-solid fa-chart-pie"></i> RS</span>
+                <p>Rutuja Shinde | Industrial Data Analytics & Business Intelligence Portfolio</p>
+                <p class="copyright">DecodeLabs Industrial Training Kit (Batch 2026)</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/Rutuja1423/Internship.git" target="_blank" class="btn btn-outline">
+                    <i class="fa-brands fa-github"></i> GitHub Repository
+                </a>
+                <a href="README.md" target="_blank" class="btn btn-outline">
+                    <i class="fa-solid fa-book"></i> Read Documentation
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
